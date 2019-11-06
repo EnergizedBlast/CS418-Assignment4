@@ -20,6 +20,10 @@ CREATE TABLE USERS(
     Primary Key(Username)
 );
 
+INSERT INTO USERS(Username, Password, Created, Deleted)
+VALUES('mister-blaster', 'password', '2017-01-13'),
+      ('xXx420xXx', 'CHEYENNE', '2012-12-24');
+
 CREATE TABLE EDITORS(
     Username varchar2(32) NOT NULL,
     Edits int,
