@@ -34,7 +34,20 @@ VALUES('phlank', 'cc0b8a95a883bc0b5f64a536de42349e0ce0673918a3c446255ddc83548871
       ('HSD5', '6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b', '2016-07-12', null),
       ('stingrayZ', 'd4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35', '2018-04-30', null),
       ('mangophilia', '4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce', '2018-10-20', null),
-      ('rlcute', 'ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d', '2019-02-13', null),
+      ('areyoubready', 'ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d', '2019-02-13', null),
+      ('SFinTX', '7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451', '2019-02-13', null),
+      ('kaanscott', '2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3', '2019-02-13', null),
+      ('uardo72', '19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7', '2019-02-13', null),
+      ('sirnexus', '4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5', '2019-02-13', null),
+      ('Bushloft', '4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8', '2019-02-13', null),
+      ('Playdohpants', '6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918', '2019-02-13', null),
+      ('finnknit', '3fdba35f04dc8c462986c992bcf875546257113072a909c162f7e470e581e278', '2019-02-13', null),
+      ('RobyInfinity', '8527a891e224136950ff32ca212b45bc93f69fbb801c3b1ebedac52775f99e61', '2019-02-13', null),
+      ('YeeyeePDF', 'e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb', '2019-02-13', null),
+      ('texasradio', 'b17ef6d19c7a5b1ee83b907c595526dcb1eb06db8227d650d5dda0a9f4ce8cd9', '2019-02-13', null),
+      ('estamachin', '4523540f1504cd17100c4835e85b7eefd49911580f8efff0599a8f283be6b9e3', '2019-02-13', null),
+      ('nolifeismylife', '4ec9599fc203d176a301536c2e091a19bc852759b255bd6818810a42c5fed14a', '2019-02-13', null),
+      ('Loubanga', '9400f1b21cb527d7fa3d3eabba93557a18ebe7a2ca4e471cfe5e4c5b4ca7f767', '2019-02-13', null),
       ('xXx420xXx', 'e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683', '2012-12-24', null);
 
 CREATE TABLE EDITORS(
@@ -71,6 +84,14 @@ CREATE TABLE BANS(
     Foreign Key(Moderator_Username) REFERENCES MODERATORS(Username),
     Foreign Key(Banned_Username) REFERENCES EDITORS(Username)
 );
+
+INSERT INTO BANS(Moderator_Username, Banned_Username, Timestamp, Reason)
+VALUES('phlank', '', , 'cuz'),
+      ('phlank', '', , 'cuz'),
+      ('phlank', '', , 'cuz'),
+      ('energized-blast', '', , 'cuz'),
+      ('energized-blast', '', , 'cuz'),
+      ('brassband', '', , 'cuz'),
 
 CREATE TABLE ARTICLE_CONTENT(
     Article_Content_ID int NOT NULL,
