@@ -59,9 +59,9 @@ CREATE TABLE MODERATORS(
 );
 
 INSERT INTO MODERATORS(Username, Deletions, Bans)
-VALUES('phlank', 22, 0),
-      ('energized-blast', 10, 0),
-      ('brassband', 12, 0);
+VALUES('phlank', 4, 3),
+      ('energized-blast', 5, 2),
+      ('brassband', 4, 1);
 
 CREATE TABLE BANS(
     Moderator_Username varchar2(32) NOT NULL,
