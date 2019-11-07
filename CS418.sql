@@ -43,6 +43,13 @@ CREATE TABLE EDITORS(
     Primary Key(Username),
     Foreign Key(Username) REFERENCES USERS(Username)
 );
+
+INSERT INTO EDITORS(Username, Edits)
+VALUES('NahumGardner', 51),
+      ('115wc', 93),
+      ('akshay699', 87),
+      ('Chemoeum', 26);
+
 CREATE TABLE MODERATORS(
     Username varchar2(32) NOT NULL,
     Deletions int,
@@ -50,6 +57,12 @@ CREATE TABLE MODERATORS(
     Primary Key(Username),
     Foreign Key(Username) REFERENCES USERS(Username)
 );
+
+INSERT INTO MODERATORS(Username, Deletions, Bans)
+VALUES('phlank', 22, 0),
+      ('energized-blast', 10, 0),
+      ('brassband', 12, 0);
+
 CREATE TABLE BANS(
     Moderator_Username varchar2(32) NOT NULL,
     Banned_Username varchar2(32) NOT NULL,
