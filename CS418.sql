@@ -178,6 +178,36 @@ CREATE TABLE USERPAGE(
     Foreign Key(Userpage_ID) REFERENCES ARTICLE_CONTENT(Article_Content_ID)
 );
 
+INSERT INTO USERPAGE(Userpage_ID, Owner, Created, Deleted)
+VALUES(1, 'phlank', 2011-01-07, null),
+      (2, 'energized-blast', 2011-07-25, null),
+      (3, 'brassband', 2013-01-10, null),
+      (4, 'ghostrom', 2013-02-01, null),
+      (5, 'akrain', 2013-03-05, null),
+      (6, 'akshay699', 2013-07-29, null),
+      (7, 'NahumGardner', 2014-06-19, null),
+      (8, '115wc', 2014-10-28, null),
+      (9, 'Chemoeum', 2016-03-16, null),
+      (10, 'morgaey', 2016-03-22, null),
+      (11, 'HSD5', 2016-07-12, null),
+      (12, 'stingrayZ', 2018-04-30, null),
+      (13, 'mangophilia', 2018-10-20, null),
+      (14, 'areyoubready', 2019-02-13, null),
+      (15, 'SFinTX', 2011-04-11, null),
+      (16, 'kaanscott', 2011-08-25, null),
+      (17, 'uardo72', 2012-04-22, null),
+      (18, 'sirnexus', 2012-06-02, null),
+      (19, 'Bushloft', 2012-08-20, null),
+      (20, 'Playdohpants', 2012-10-18, null),
+      (21, 'finnknit', 2015-05-03, null),
+      (22, 'RobyInfinity', 2016-05-20, null),
+      (23, 'YeeyeePDF', 2016-05-22, null),
+      (24, 'texasradio', 2017-03-14, null),
+      (25, 'estamachin', 2017-12-22, null),
+      (26, 'nolifeismylife', 2019-01-15, null),
+      (27, 'Loubanga', 2019-04-09, null),
+      (28, 'xXx420xXx', 2012-12-24, null);
+
 CREATE TABLE DELETE_ARTICLES(
     Deleted_ID int NOT NULL,
     Moderator_Username varchar2(32) NOT NULL,
