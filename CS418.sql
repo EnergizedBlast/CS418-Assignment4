@@ -58,10 +58,11 @@ CREATE TABLE EDITORS(
 );
 
 INSERT INTO EDITORS(Username, Edits)
-VALUES('NahumGardner', 51),
-      ('115wc', 93),
-      ('akshay699', 87),
-      ('Chemoeum', 26);
+VALUES('NahumGardner', 76),
+      ('115wc', 20),
+      ('akshay699', 30),
+      ('ghostrom', 79),
+      ('Chemoeum', 123);
 
 CREATE TABLE MODERATORS(
     Username varchar2(32) NOT NULL,
@@ -105,6 +106,33 @@ CREATE TABLE ARTICLES(
     Foreign Key(Article_ID) REFERENCES ARTICLE_CONTENT(Article_Content_ID)
 );
 
+INSERT INTO ARTICLES(Article_ID, Title, Creator, Edits, Created, Deleted)
+VALUES(1, 'Mathematics', 'ghostrom', 7, 2014-06-11, null),
+      (2, 'History of mathematics', 'ghostrom', 14, 2014-06-17, null),
+      (3, 'Mathematical notation', 'ghostrom', 11, 2014-10-14, null),
+      (4, 'Areas of mathematics', 'ghostrom', 16, 2015-03-01, null),
+      (5, 'Pure mathematics', 'ghostrom', 15, 2016-03-22, null),
+      (6, 'Arithmetic', 'ghostrom', 16, 2016-04-09, null),
+      (7, 'Algebra', 'NahumGardner', 15, 2016-04-26, null),
+      (8, 'Geometry', 'NahumGardner', 14, 2016-06-18, null),
+      (9, 'Calculus', 'NahumGardner', 19, 2016-08-24, null),
+      (10, 'Applied mathematics', 'NahumGardner', 9, 2016-11-04, null),
+      (11, 'Statistics', 'NahumGardner', 19, 2017-02-12, null),
+      (12, 'Computational mathematics', 'NahumGardner', 11, 2017-05-25, null),
+      (13, 'Numerical analysis', 'NahumGardner', 18, 2017-06-20, null),
+      (14, 'Functional analysis', 'Chemoeum', 13, 2017-09-04, null),
+      (15, 'Approximation theory', 'Chemoeum', 18, 2017-09-09, null),
+      (16, 'Euclidean geometry', 'Chemoeum', 10, 2017-11-20, null),
+      (17, 'Differential geometry', 'Chemoeum', 18, 2018-01-15, null),
+      (18, 'Non-Euclidean geometry', 'Chemoeum', 20, 2018-02-20, null),
+      (19, 'Topology', 'Chemoeum', 17, 2018-04-25, null),
+      (20, 'Algebraic geometry', 'Chemoeum', 13, 2018-04-27, null),
+      (21, 'Discrete geometry', 'Chemoeum', 14, 2018-06-07, null),
+      (22, 'Computational geometry', 'akshay699', 12, 2018-10-29, null),
+      (23, 'Geometric group theory', 'akshay699', 18, 2019-01-15, null),
+      (24, 'Convex geometry', '115wc', 10, 2019-05-24, null),
+      (25, 'Number theory', '115wc', 10, 2019-08-19, null);
+
 CREATE TABLE ARTICLE_CONTENT(
     Article_Content_ID int NOT NULL,
     Text_URL varchar2(128) NOT NULL,
@@ -122,6 +150,7 @@ CREATE TABLE USERPAGE(
     Foreign Key(Owner) REFERENCES EDITORS(Username),
     Foreign Key(Userpage_ID) REFERENCES ARTICLE_CONTENT(Article_Content_ID)
 );
+
 CREATE TABLE DELETE_ARTICLES(
     Deleted_ID int NOT NULL,
     Moderator_Username varchar2(32) NOT NULL,
@@ -137,6 +166,7 @@ CREATE TABLE EDIT_CONTENT(
     Images_URL varchar2(128),
     Primary Key(Edit_Content_ID)
 );
+
 CREATE TABLE EDITS(
     Edit_ID int NOT NULL,
     Editor varchar2(32) NOT NULL,
@@ -148,6 +178,7 @@ CREATE TABLE EDITS(
     Foreign Key(Edit_ID) REFERENCES EDIT_CONTENT(Edit_Content_ID),
     Foreign Key(Editor) REFERENCES EDITORS(Username)
 );
+
 CREATE TABLE DELETE_EDITS(
     Deleted_ID int NOT NULL,
     Moderator_Username varchar2(32) NOT NULL,
