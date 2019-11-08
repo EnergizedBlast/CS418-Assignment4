@@ -141,6 +141,33 @@ CREATE TABLE ARTICLE_CONTENT(
     Primary Key(Article_Content_ID)
 );
 
+INSERT INTO ARTICLE_CONTENT(Article_Content_ID, Text_URL, Images_URL, Categories)
+VALUES(1, '/var/www/html/wiki/articles/Mathematics.wiki', '/var/www/html/wiki/articles/img/Mathematics.wiki.jpg', 'Maths'),
+      (2, '/var/www/html/wiki/articles/History of mathematics.wiki', '/var/www/html/wiki/articles/img/History of mathematics.wiki.jpg', 'Maths|History'),
+      (3, '/var/www/html/wiki/articles/Mathematical notation.wiki', '/var/www/html/wiki/articles/img/Mathematical notation.wiki.jpg', 'Maths|Writing|Notation'),
+      (4, '/var/www/html/wiki/articles/Areas of mathematics.wiki', '/var/www/html/wiki/articles/img/Areas of mathematics.wiki.jpg', 'Maths|Subcategories'),
+      (5, '/var/www/html/wiki/articles/Pure mathematics.wiki', '/var/www/html/wiki/articles/img/Pure mathematics.wiki.jpg', 'Maths|Pure Mathematics|Theory'),
+      (6, '/var/www/html/wiki/articles/Arithmetic.wiki', '/var/www/html/wiki/articles/img/Arithmetic.wiki.jpg', 'Maths|Arithmetic'),
+      (7, '/var/www/html/wiki/articles/Algebra.wiki', '/var/www/html/wiki/articles/img/Algebra.wiki.jpg', 'Maths|Algebra'),
+      (8, '/var/www/html/wiki/articles/Geometry.wiki', '/var/www/html/wiki/articles/img/Geometry.wiki.jpg', 'Maths|Geometry'),
+      (9, '/var/www/html/wiki/articles/Calculus.wiki', '/var/www/html/wiki/articles/img/Calculus.wiki.jpg', 'Maths|Theory|Calculus'),
+      (10, '/var/www/html/wiki/articles/Applied mathematics.wiki', '/var/www/html/wiki/articles/img/Applied mathematics.wiki.jpg', 'Maths|Application'),
+      (11, '/var/www/html/wiki/articles/Statistics.wiki', '/var/www/html/wiki/articles/img/Statistics.wiki.jpg', 'Maths|Statistics|Application'),
+      (12, '/var/www/html/wiki/articles/Computational mathematics.wiki', '/var/www/html/wiki/articles/img/Computational mathematics.wiki.jpg', 'Maths|Application'),
+      (13, '/var/www/html/wiki/articles/Numerical analysis.wiki', '/var/www/html/wiki/articles/img/Numerical analysis.wiki.jpg', 'Maths|Application'),
+      (14, '/var/www/html/wiki/articles/Functional analysis.wiki', '/var/www/html/wiki/articles/img/Functional analysis.wiki.jpg', 'Maths|Application'),
+      (15, '/var/www/html/wiki/articles/Approximation theory.wiki', '/var/www/html/wiki/articles/img/Approximation theory.wiki.jpg', 'Maths|Theory'),
+      (16, '/var/www/html/wiki/articles/Euclidean geometry.wiki', '/var/www/html/wiki/articles/img/Euclidean geometry.wiki.jpg', 'Maths|Geometry'),
+      (17, '/var/www/html/wiki/articles/Differential geometry.wiki', '/var/www/html/wiki/articles/img/Differential geometry.wiki.jpg', 'Maths|Geometry|Calculus'),
+      (18, '/var/www/html/wiki/articles/Non-Euclidean geometry.wiki', '/var/www/html/wiki/articles/img/Non-Euclidean geometry.wiki.jpg', 'Maths|Theory'),
+      (19, '/var/www/html/wiki/articles/Topology.wiki', '/var/www/html/wiki/articles/img/Topology.wiki.jpg', 'Maths|Theory'),
+      (20, '/var/www/html/wiki/articles/Algebraic geometry.wiki', '/var/www/html/wiki/articles/img/Algebraic geometry.wiki.jpg', 'Maths|Theory'),
+      (21, '/var/www/html/wiki/articles/Discrete geometry.wiki', '/var/www/html/wiki/articles/img/Discrete geometry.wiki.jpg', 'Maths|Theory'),
+      (22, '/var/www/html/wiki/articles/Computational geometry.wiki', '/var/www/html/wiki/articles/img/Computational geometry.wiki.jpg', 'Maths|Application'),
+      (23, '/var/www/html/wiki/articles/Geometric group theory.wiki', '/var/www/html/wiki/articles/img/Geometric group theory.wiki.jpg', 'Maths|Theory'),
+      (24, '/var/www/html/wiki/articles/Convex geometry.wiki', '/var/www/html/wiki/articles/img/Convex geometry.wiki.jpg', 'Maths|Application'),
+      (25, '/var/www/html/wiki/articles/Number theory.wiki', '/var/www/html/wiki/articles/img/Number theory.wiki.jpg', 'Maths|Theory|Application');
+
 CREATE TABLE USERPAGE(
     Userpage_ID int NOT NULL,
     Owner varchar2(32) NOT NULL,
