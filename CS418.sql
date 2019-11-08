@@ -112,7 +112,7 @@ VALUES(1, 'Mathematics', 'ghostrom', 7, 2014-06-11, null),
       (3, 'Mathematical notation', 'ghostrom', 11, 2014-10-14, null),
       (4, 'Areas of mathematics', 'ghostrom', 16, 2015-03-01, null),
       (5, 'Pure mathematics', 'ghostrom', 15, 2016-03-22, null),
-      (6, 'Arithmetic', 'ghostrom', 16, 2016-04-09, null),
+      (6, 'Arithmetic', 'ghostrom', 16, 2016-04-09, 2019-11-02),
       (7, 'Algebra', 'NahumGardner', 15, 2016-04-26, null),
       (8, 'Geometry', 'NahumGardner', 14, 2016-06-18, null),
       (9, 'Calculus', 'NahumGardner', 19, 2016-08-24, null),
@@ -216,6 +216,9 @@ CREATE TABLE DELETE_ARTICLES(
     Foreign Key(Deleted_ID) REFERENCES ARTICLES(Article_ID),
     Foreign Key(Moderator_Username) REFERENCES MODERATORS(Username)
 );
+
+INSERT INTO DELETE_ARTICLES(Deleted_ID, Moderator_Username, Timestamp, Reason)
+VALUES(6, 'phlank', 2019-11-02, 'Not even really math is it tho');
 
 CREATE TABLE EDIT_CONTENT(
     Edit_Content_ID int NOT NULL,
