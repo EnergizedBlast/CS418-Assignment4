@@ -85,21 +85,14 @@ CREATE TABLE BANS(
     Foreign Key(Banned_Username) REFERENCES EDITORS(Username)
 );
 
-INSERT INTO BANS(Moderator_Username, Banned_Username, Timestamp, Reason)
-VALUES('phlank', '', , 'cuz'),
-      ('phlank', '', , 'cuz'),
-      ('phlank', '', , 'cuz'),
-      ('energized-blast', '', , 'cuz'),
-      ('energized-blast', '', , 'cuz'),
-      ('brassband', '', , 'cuz'),
+INSERT INTO BANS(Moderator_Username, Banned_Username, Date, Reason)
+VALUES('phlank', 'YeeyeePDF', 2014-04-03 06:03:36, 'continued replacing external links to never gonna give you up'),
+      ('phlank', 'texasradio', 2015-10-14 20:51:24, 'continued providing false citations'),
+      ('phlank', 'estamachin', 2017-02-07 13:50:03, 'death threats lol'),
+      ('energized-blast', 'nolifeismylife', 2019-05-01 22:51:14, 'long time coming'),
+      ('energized-blast', 'Loubanga', 2018-03-09 20:59:43, 'refuses to run any of his edits through a spell check'),
+      ('brassband', 'xXx420xXx', 2017-01-24 03:01:41, 'just look at that username'),
 
-CREATE TABLE ARTICLE_CONTENT(
-    Article_Content_ID int NOT NULL,
-    Text_URL varchar2(128) NOT NULL,
-    Images_URL varchar2(128),
-    Categories varchar2(3999),
-    Primary Key(Article_Content_ID)
-);
 CREATE TABLE ARTICLES(
     Article_ID int NOT NULL,
     Title varchar2(128) NOT NULL,
@@ -111,6 +104,15 @@ CREATE TABLE ARTICLES(
     Foreign Key(Creator) REFERENCES EDITORS(Username),
     Foreign Key(Article_ID) REFERENCES ARTICLE_CONTENT(Article_Content_ID)
 );
+
+CREATE TABLE ARTICLE_CONTENT(
+    Article_Content_ID int NOT NULL,
+    Text_URL varchar2(128) NOT NULL,
+    Images_URL varchar2(128),
+    Categories varchar2(3999),
+    Primary Key(Article_Content_ID)
+);
+
 CREATE TABLE USERPAGE(
     Userpage_ID int NOT NULL,
     Owner varchar2(32) NOT NULL,
