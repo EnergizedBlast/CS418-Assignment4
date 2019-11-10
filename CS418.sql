@@ -925,4 +925,55 @@ CREATE TABLE DELETE_EDITS(
     Foreign Key(Moderator_Username) REFERENCES MODERATORS(Username)
 );
 
-select Article_ID from ARTICLES;
+SELECT Username, Edits
+FROM EDITORS
+WHERE Edits > 50;
+
+SELECT Title
+FROM ARTICLES
+WHERE Article_ID <= 10;
+
+SELECT Title, Edits
+FROM ARTICLES
+WHERE Edits < 10;
+
+SELECT Article_Title, Editor, Created
+FROM EDITS
+WHERE Edit_ID <= 100;
+
+SELECT Title
+FROM ARTICLES
+WHERE LOWER(Title) LIKE '%geometry%';
+
+SELECT Title
+FROM ARTICLES
+WHERE Title = 'Calculus';
+
+/* Insert 7-8 here */
+
+SELECT A.Title, C.Categories
+FROM ARTICLES A, ARTICLE_CONTENT C
+WHERE LOWER(C.Categories) LIKE '%application%' AND A.Article_ID = C.Article_Content_ID;
+
+SELECT A.Title, C.Categories, E.Username, E.Edits
+FROM ARTICLES A, ARTICLE_CONTENT C, EDITORS E
+WHERE LOWER(C.Categories) LIKE '%theory%' AND A.Article_ID = C.Article_Content_ID AND E.Username = A.Creator AND E.Edits > 100;
+
+SELECT SUM(Edits), MAX(Edits), MIN(Edits), round(AVG(Edits), 1)
+FROM EDITORS;
+
+SELECT A.Title, A.Creator
+FROM ARTICLES A
+WHERE A.Article_ID IN
+(
+SELECT C.Article_Content_ID
+FROM ARTICLE_CONTENT C
+WHERE LOWER(C.Categories) LIKE '%history%'
+);
+
+SELECT A.Creator, COUNT(A.Creator)
+FROM ARTICLES A
+GROUP BY A.Creator
+ORDER BY COUNT(A.Creator) DESC;
+
+/* Insert 15 here */
