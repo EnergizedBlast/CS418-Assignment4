@@ -949,7 +949,13 @@ SELECT Title
 FROM ARTICLES
 WHERE Title = 'Calculus';
 
-/* Insert 7-8 here */
+SELECT Title
+FROM ARTICLES
+WHERE Created BETWEEN '2014-01-01' AND '2016-12-31';
+
+SELECT Usernme
+FROM USERS
+WHERE to_char(Created, 'YYYY-MM-DD') LIKE '%2017%';
 
 SELECT A.Title, C.Categories
 FROM ARTICLES A, ARTICLE_CONTENT C
