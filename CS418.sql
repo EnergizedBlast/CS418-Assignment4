@@ -982,4 +982,5 @@ FROM ARTICLES A
 GROUP BY A.Creator
 ORDER BY COUNT(A.Creator) DESC;
 
+
 /* Insert 15 here */
