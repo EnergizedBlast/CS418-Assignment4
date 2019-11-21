@@ -8,11 +8,11 @@ public class SQLTerminal {
     private static final String CONNECT_URL = "jdbc:oracle:thin:@//csor12c.dhcp.bsu.edu:1521/or12cdb";
     private static final String MENU =
             "Select an option between 1 and 5 or use 0 to quit\n" + //
-            "1: Get users with accounts created before or after date\n" + //
-            "2: Get edits to article made before or after date\n" + //
-            "3: Get editors with more or less than N edits\n" + //
-            "4: Get articles with given category\n" + //
-            "5: Get articles created by editor";
+                    "1: Get users with accounts created before or after date\n" + //
+                    "2: Get edits to article made before or after date\n" + //
+                    "3: Get editors with more or less than N edits\n" + //
+                    "4: Get articles with given category\n" + //
+                    "5: Get articles created by editor";
     private static final String OPTION_1_BEGIN = "You've selected 1: Get users with accounts created before or after date. Select your options:";
     private static final String BEFORE_AFTER = "1: Before date\n2: After date";
     private static final String DATE_REQUEST = "What date? Input as YYYY-MM-DD";
